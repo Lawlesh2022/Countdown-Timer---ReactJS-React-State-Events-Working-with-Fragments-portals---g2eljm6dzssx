@@ -2,16 +2,30 @@ import React, { Component, useState, useEffect } from "react";
 import '../styles/App.css';
 
 const App = () => {
+  const [time, setTime] = useState("")
+  const addTime = (e)=>{
+    const input = parseInt( e.target.value)
+    setTime(input)
+  }
+  var interval;
+  useEffect(()=>{
+    interval = setInterval(()=>{
+      setTime(time-1)
+      if(time<=0){
+        setTime(0)
+      }
+    })
+  })
   // write your code here 
 
   return (
     <div className="wrapper">
       <div id="whole-center">
         <h1>
-          Reverse countdown for<input id="timeCount" onKeyDown={/* callback function */} /> sec.
+          Reverse countdown for<input id="timeCount" onKeyDown={addTime} /> sec.
         </h1>
       </div>
-      <div id="current-time">{/* remaining time */}</div>
+      <div id="current-time">{time}</div>
     </div>
   )
 }
