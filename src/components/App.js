@@ -4,10 +4,10 @@ import '../styles/App.css';
 const App = () => {
   const [time, setTime] = useState("")
   const addTime = (e)=>{
-    const input = e.target.value
+    const input = parseInt(e.target.value)
     setTime(input)
-//     if(input<=0){
-//       setTime(0)
+     if(input<=0){
+      setTime(0)
     }
   }
   
