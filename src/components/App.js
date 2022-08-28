@@ -6,7 +6,7 @@ const App = () => {
   const addTime = (e)=>{
     const input = parseInt( e.target.value)
     setTime(input)
-    if(input<=0){
+    if(input<0){
       setTime(0)
     }
   }
