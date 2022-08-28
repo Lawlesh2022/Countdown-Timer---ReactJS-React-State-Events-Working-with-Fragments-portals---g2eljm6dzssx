@@ -6,6 +6,9 @@ const App = () => {
   const addTime = (e)=>{
     const input = parseInt( e.target.value)
     setTime(input)
+    if(input<=0){
+      setTime(0)
+    }
   }
   var interval;
   useEffect(()=>{
