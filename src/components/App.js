@@ -14,7 +14,7 @@ const App = () => {
   useEffect(()=>{
     interval = setInterval(()=>{
       setTime(time-1)
-      if(time<=0){
+      if(time<0){
         setTime(0)
       }
     }, 1000)
