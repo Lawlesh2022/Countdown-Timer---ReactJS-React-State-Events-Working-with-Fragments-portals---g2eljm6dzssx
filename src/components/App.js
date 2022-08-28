@@ -7,7 +7,7 @@ const App = () => {
     const input = parseInt( e.target.value)
     setTime(input)
     if(input<0){
-      setTime(0)
+      setTime("0")
     }
   }
   
@@ -15,7 +15,7 @@ const App = () => {
       const interval = setInterval(()=>{
       setTime(time-1)
       if(time<=0){
-        setTime("0")
+        setTime(0)
       }
     }, 1000)
     return()=>clearInterval(interval)
