@@ -14,7 +14,8 @@ const App = () => {
       if(time<=0){
         setTime(0)
       }
-    })
+    }, 1000)
+    return()=>clearInterval(interval)
   })
   // write your code here 
 
