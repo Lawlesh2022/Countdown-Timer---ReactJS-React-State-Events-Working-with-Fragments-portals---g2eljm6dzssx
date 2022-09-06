@@ -5,12 +5,9 @@ const App = () => {
   const [time, setTime] = useState("")
   const addTime = (e)=>{
     const input = parseInt(e.target.value)
-    if(input>0){
+   
     setTime(input)
-    }
-    else{
-      seTime(0)
-    }  
+   
     
   }
   
