@@ -4,19 +4,19 @@ import '../styles/App.css';
 const App = () => {
   const [time, setTime] = useState("")
   const addTime = (e)=>{
-    const input = parseInt(e.target.value)
-   
-    setTime(input)
-   
-    
+    const input = parseInt(e.target.value)   
+    setTime(input)    
   }
   
   useEffect(()=>{
       const interval = setInterval(()=>{
       setTime(time-1)
-      if(time<=0){
-        setTime(0)
+      if(time>0){
+        setTime(time-1)
       }
+        else{
+          setTime(0)
+        }
     }, 1000)
     return()=>clearInterval(interval)
   })
